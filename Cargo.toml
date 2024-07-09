@@ -1,0 +1,30 @@
+[package]
+name = "gx21m15"
+version = "0.1.0"
+authors = ["Ivan Li <ivanli2048@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+log = { version = "0.4.21" }
+
+embedded-hal = "1.0.0"
+embedded-hal-async = { version = "1.0.0", optional = true }
+maybe-async-cfg = "0.2.3"
+
+[profile.dev]
+# Rust debug is too slow.
+# For debug builds always builds with some optimization
+opt-level = 0
+
+[profile.release]
+codegen-units = 1        # LLVM can perform better optimizations using a single thread
+debug = 2
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = 's'
+overflow-checks = false
+
+[features]
+async = ["dep:embedded-hal-async"]
