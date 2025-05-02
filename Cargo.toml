@@ -9,8 +9,6 @@ keywords = ["temperature-sensor", "embedded-hal-driver", "no-std", "gx21m15", "a
 repository = "https://github.com/IvanLi-CN/gx21m15-rs"
 
 [dependencies]
-log = { version = "0.4.22" }
-
 embedded-hal = "1.0.0"
 embedded-hal-async = { version = "1.0.0", optional = true }
 maybe-async-cfg = "0.2.5"
