@@ -18,6 +18,6 @@ cargo add gx21m15 --features async
 
 ## License
 
-Rand is distributed under the terms of both the MIT license and the Apache License (Version 2.0).
+`gx21m15-rs` is distributed under the terms of both the MIT license and the Apache License (Version 2.0).
 
-See LICENSE-APACHE and LICENSE-MIT for details.
+See [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) for details.
